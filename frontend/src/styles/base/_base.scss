@@ -1,0 +1,99 @@
+/*
+    Global
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Crafty+Girls&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import '../utilities/imports';
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  font-size: 16px;
+  box-sizing: border-box;
+  max-width: 100vw;
+}
+
+/*HTML ELEMENT STYLING*/
+body {
+  background-color: $off-white;
+  font-family: 'Nunito', sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+figure {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+form {
+  background-color: $grape;
+  color: $light-text;
+  font-weight: bold;
+  border-radius: $card-border-radius;
+  box-shadow: $box-shadow;
+}
+
+form h3 {
+  color: $light-text;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Crafty Girls', cursive;
+  color: $dark-text;
+  font-weight: 500;
+  line-height: 1;
+}
+
+p {
+  line-height: 1.6;
+  font-size: 1rem;
+  color: $muted-text;
+  width: 80%;
+}
+
+p a {
+  line-height: 1.6;
+  font-size: 1rem;
+  color: $bright-blue;
+  transition: color 250ms ease-in-out;
+
+  &:hover {
+    color: $blueberry;
+    text-decoration: none;
+  }
+}
+
+aside {
+  font-size: 1rem;
+  color: $blueberry;
+
+  svg {
+    fill: $blueberry;
+  }
+}
+
+nav {
+  background-color: $off-white;
+  box-shadow: $box-shadow;
+  margin-bottom: 3rem;
+}
+
+.navbar {
+  background-color: $blueberry;
+}

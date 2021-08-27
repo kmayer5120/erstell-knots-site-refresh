@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "gatsby-cli": "^3.12.0"
+  },
+  "scripts": {
+    "start": "cd frontend && gatsby develop -o"
+  }
+}
