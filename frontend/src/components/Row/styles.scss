@@ -1,4 +1,10 @@
+@import '../../styles/utilities/imports';
+
 .row {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+
+  @include media('<tablet') {
+    flex-direction: column;
+  }
 }

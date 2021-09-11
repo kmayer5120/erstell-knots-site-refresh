@@ -3,33 +3,18 @@ import { StaticImage } from 'gatsby-plugin-image';
 import { Link } from 'gatsby';
 import Container from '../components/Container';
 import Row from '../components/Row';
+import Col from '../components/Col';
 import Section from '../components/Section';
 import Layout from '../components/Layout';
+import Hero from '../components/Hero';
 import '../styles/pages/_home.scss';
 
 const IndexPage = () => {
   return (
     <Layout title="Home">
       {/* <!--    hero--> */}
-      <header className="container">
-        <div className="hero">
-          <Row>
-            <div className="col-sm-6 hero__img">
-              <StaticImage
-                src="../images/logo-ek-watercolor.png"
-                alt="hero"
-                className="img-fluid"
-              />
-            </div>
-            <div className="col-sm-6 hero__content">
-              <div className="hero__text">The best is handmade</div>
-              <div className="hero__subtext">
-                Crochet pattern designer & tester
-              </div>
-            </div>
-          </Row>
-        </div>
-      </header>
+      <Hero />
+
       {/* <!--    navbar--> */}
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <button
@@ -168,95 +153,87 @@ const IndexPage = () => {
       <Section>
         <Container>
           <Row className="" id="about-me-wrapper">
-            <div
-              className="
-            col-lg-6 col-md-12
-            px-3
-            my-3
-            d-flex
-            flex-column
-            justify-content-center
-            align-items-center
-          "
-              id="about-me"
-            >
-              <h2 className="py-2">About Erstell Knots</h2>
-              <p className="pt-2">
-                My name is April and I’m from Albuquerque, NM, USA. I started
-                Erstell.Knots in December of 2020. I first learned how to
-                crochet in April of 2020. As I learned more about this craft, I
-                got bored with following other patterns. I wanted to be creative
-                and create my own work. After I created my first pattern,
-                <Link
-                  to="https://www.ravelry.com/patterns/library/oceans-summit-ear-warmer"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Ocean’s Summit Ear Warmer
-                </Link>
-                , I got a taste of what it was like to go through the whole
-                process.
-              </p>
+            <Col span={6}>
+              <div id="about-me">
+                <h2 className="py-2">About Erstell Knots</h2>
+                <p className="pt-2">
+                  My name is April and I’m from Albuquerque, NM, USA. I started
+                  Erstell.Knots in December of 2020. I first learned how to
+                  crochet in April of 2020. As I learned more about this craft,
+                  I got bored with following other patterns. I wanted to be
+                  creative and create my own work. After I created my first
+                  pattern,
+                  <Link
+                    to="https://www.ravelry.com/patterns/library/oceans-summit-ear-warmer"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Ocean’s Summit Ear Warmer
+                  </Link>
+                  , I got a taste of what it was like to go through the whole
+                  process.
+                </p>
 
-              <aside className="my-2">
-                Designing
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.218 19l-1.782-1.75 5.25-5.25-5.25-5.25 1.782-1.75 6.968 7-6.968 7z" />
-                </svg>
-                Editing
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.218 19l-1.782-1.75 5.25-5.25-5.25-5.25 1.782-1.75 6.968 7-6.968 7z" />
-                </svg>
-                Publishing
-              </aside>
+                <aside className="my-2">
+                  Designing
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.218 19l-1.782-1.75 5.25-5.25-5.25-5.25 1.782-1.75 6.968 7-6.968 7z" />
+                  </svg>
+                  Editing
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.218 19l-1.782-1.75 5.25-5.25-5.25-5.25 1.782-1.75 6.968 7-6.968 7z" />
+                  </svg>
+                  Publishing
+                </aside>
 
-              <p className="pt-2">
-                During the testing and publishing phase of my first pattern is
-                when the brand Erstell.Knots was born. Since then, I have
-                completed a
-                <Link
-                  to="https://www.ravelry.com/patterns/library/warm-ashes-beanie"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  hat pattern
-                </Link>
-                and I already have a long list of items I want to design
-                patterns for. All of my designs are available on
-                <Link
-                  to="https://www.ravelry.com/designers/april-donk"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Ravelry
-                </Link>
-                and my
-                <Link
-                  to="https://www.etsy.com/shop/ErstellKnots"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Etsy
-                </Link>
-                store.
-              </p>
-              <p className="pt-2">
-                Once I have a few more patterns completed, I plan on learning
-                tunisian crochet and knitting. Once I become more established
-                and have more space, I will be dyeing and selling my own yarn.
-              </p>
-            </div>
-            <div className="col-lg-6 col-md-12 px-3 my-3">
+                <p className="pt-2">
+                  During the testing and publishing phase of my first pattern is
+                  when the brand Erstell.Knots was born. Since then, I have
+                  completed a
+                  <Link
+                    to="https://www.ravelry.com/patterns/library/warm-ashes-beanie"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    hat pattern
+                  </Link>
+                  and I already have a long list of items I want to design
+                  patterns for. All of my designs are available on
+                  <Link
+                    to="https://www.ravelry.com/designers/april-donk"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Ravelry
+                  </Link>
+                  and my
+                  <Link
+                    to="https://www.etsy.com/shop/ErstellKnots"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Etsy
+                  </Link>
+                  store.
+                </p>
+                <p className="pt-2">
+                  Once I have a few more patterns completed, I plan on learning
+                  tunisian crochet and knitting. Once I become more established
+                  and have more space, I will be dyeing and selling my own yarn.
+                </p>
+              </div>
+            </Col>
+            <Col span={6}>
               <div className="container announcements">
                 <h2>Finding Summer Barefoot Sandals</h2>
 
@@ -269,7 +246,6 @@ const IndexPage = () => {
                     <span id="seconds"></span>
                   </p>
                 </div>
-
                 <div className="announcements__img-grid">
                   <StaticImage
                     src="../images/img-finding-summer-barefoot-sandals-2.jpeg"
@@ -321,7 +297,7 @@ const IndexPage = () => {
                 alt=""
                 className="img-fluid rounded"
               />
-            </div>
+            </Col>
           </Row>
         </Container>
       </Section>
@@ -331,151 +307,105 @@ const IndexPage = () => {
         <div className="container image-grid" id="image-grid"></div>
       </Section>
       {/* <!-- services --> */}
-      <Section className="container">
-        <Row>
-          <div className="col-md-6">
-            <Row>
-              <div className="col-md-12" id="services-tools">
-                {/* <!--start modal--> */}
-                <Link to="#tools-modal" role="button" data-toggle="modal">
+      <Section>
+        <Container>
+          <Row>
+            <Col span={6}>
+              <Row>
+                <div className="col-md-12" id="services-tools">
                   <StaticImage
                     src="../images/tools.jpeg"
                     alt="tools"
                     className="img-fluid mw-25 mh-25 p-2 mx-auto"
                   />
-                </Link>
-                <div className="modal fade show" id="tools-modal" role="dialog">
-                  <div className="modal-dialog">
-                    <div className="modal-content">
-                      <div className="modal-header">
-                        <button
-                          type="button"
-                          className="close"
-                          data-dismiss="modal"
-                        >
-                          <span aria-hidden="true">My tools &times;</span>
-                        </button>
-                      </div>
-                      <div className="modal-body" id="tools-modal-content">
-                        <StaticImage
-                          src="../images/tools.jpeg"
-                          alt="tools"
-                          className="img-fluid p-2 mx-auto"
-                        />
-                      </div>
-                    </div>
+                </div>
+              </Row>
+              <Row>
+                <h3 className="mt-3" id="links-description">
+                  Find me here:
+                </h3>
+                <Col span={6}>
+                  <div className="etsy-ravelry-svg-links-container">
+                    <Link
+                      to="https://www.etsy.com/shop/ErstellKnots"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <StaticImage
+                        src="../images/etsy_logo_sm_white.png"
+                        id="etsy-logo"
+                        alt="etsy-logo"
+                      />
+                    </Link>
+                    <Link
+                      to="https://www.ravelry.com/designers/april-donk"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <StaticImage
+                        className="img-fluid py-2"
+                        src="../images/ravelry-logo-white.svg"
+                        id="ravelry-logo"
+                        alt="ravelry logo"
+                      />
+                    </Link>
                   </div>
-                </div>
-                {/* <!--end modal--> */}
-              </div>
-            </Row>
-            <div
-              className="row p-2 m-3 d-flex flex-column justify-content-center"
-              id="links-container"
-            >
-              <h3 className="mt-3" id="links-description">
-                Find me here:
-              </h3>
-              <div
-                className="
-                col-md-6
-                p-2
-                d-flex
-                flex-row
-                align-items-center
-                justify-content-around
-              "
-              >
-                <div className="etsy-ravelry-svg-links-container">
+                </Col>
+                <Col span={6}>
+                  {/* <!--SVG Icon found at: https://iconmonstr.com/instagram-14-svg/--> */}
                   <Link
-                    to="https://www.etsy.com/shop/ErstellKnots"
+                    to="https://www.instagram.com/erstell.knots/"
                     target="_blank"
                     rel="noreferrer"
+                    className="mr-2"
                   >
-                    <StaticImage
-                      src="../images/etsy_logo_sm_white.png"
-                      id="etsy-logo"
-                      alt="etsy-logo"
-                    />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      id="instagram-logo"
+                      viewBox="0 0 24 24"
+                      className="py-2"
+                    >
+                      <path d="M14.829 6.302c-.738-.034-.96-.04-2.829-.04s-2.09.007-2.828.04c-1.899.087-2.783.986-2.87 2.87-.033.738-.041.959-.041 2.828s.008 2.09.041 2.829c.087 1.879.967 2.783 2.87 2.87.737.033.959.041 2.828.041 1.87 0 2.091-.007 2.829-.041 1.899-.086 2.782-.988 2.87-2.87.033-.738.04-.96.04-2.829s-.007-2.09-.04-2.828c-.088-1.883-.973-2.783-2.87-2.87zm-2.829 9.293c-1.985 0-3.595-1.609-3.595-3.595 0-1.985 1.61-3.594 3.595-3.594s3.595 1.609 3.595 3.594c0 1.985-1.61 3.595-3.595 3.595zm3.737-6.491c-.464 0-.84-.376-.84-.84 0-.464.376-.84.84-.84.464 0 .84.376.84.84 0 .463-.376.84-.84.84zm-1.404 2.896c0 1.289-1.045 2.333-2.333 2.333s-2.333-1.044-2.333-2.333c0-1.289 1.045-2.333 2.333-2.333s2.333 1.044 2.333 2.333zm-2.333-12c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.958 14.886c-.115 2.545-1.532 3.955-4.071 4.072-.747.034-.986.042-2.887.042s-2.139-.008-2.886-.042c-2.544-.117-3.955-1.529-4.072-4.072-.034-.746-.042-.985-.042-2.886 0-1.901.008-2.139.042-2.886.117-2.544 1.529-3.955 4.072-4.071.747-.035.985-.043 2.886-.043s2.14.008 2.887.043c2.545.117 3.957 1.532 4.071 4.071.034.747.042.985.042 2.886 0 1.901-.008 2.14-.042 2.886z" />
+                    </svg>
                   </Link>
+                  {/* <!--SVG Icon found at: https://iconmonstr.com/facebook-4-svg/--> */}
                   <Link
-                    to="https://www.ravelry.com/designers/april-donk"
+                    to="https://www.facebook.com/erstell.knots"
                     target="_blank"
                     rel="noreferrer"
+                    className="mx-2"
                   >
-                    <StaticImage
-                      className="img-fluid py-2"
-                      src="../images/ravelry-logo-white.svg"
-                      id="ravelry-logo"
-                      alt="ravelry logo"
-                    />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      id="facebook-logo"
+                      viewBox="0 0 24 24"
+                      className="py-2"
+                    >
+                      <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z" />
+                    </svg>
                   </Link>
-                </div>
-              </div>
-              <div
-                className="
-                col-md-6
-                p-2
-                d-flex
-                flex-row
-                align-items-center
-                justify-content-around
-              "
-              >
-                {/* <!--SVG Icon found at: https://iconmonstr.com/instagram-14-svg/--> */}
-                <Link
-                  to="https://www.instagram.com/erstell.knots/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mr-2"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    id="instagram-logo"
-                    viewBox="0 0 24 24"
-                    className="py-2"
+                  {/* <!--SVG Icon found at: https://www.iconpacks.net/free-icon/tiktok-logo-4505.html--> */}
+                  <Link
+                    to="https://www.tiktok.com/@erstell.knots"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mx-2"
                   >
-                    <path d="M14.829 6.302c-.738-.034-.96-.04-2.829-.04s-2.09.007-2.828.04c-1.899.087-2.783.986-2.87 2.87-.033.738-.041.959-.041 2.828s.008 2.09.041 2.829c.087 1.879.967 2.783 2.87 2.87.737.033.959.041 2.828.041 1.87 0 2.091-.007 2.829-.041 1.899-.086 2.782-.988 2.87-2.87.033-.738.04-.96.04-2.829s-.007-2.09-.04-2.828c-.088-1.883-.973-2.783-2.87-2.87zm-2.829 9.293c-1.985 0-3.595-1.609-3.595-3.595 0-1.985 1.61-3.594 3.595-3.594s3.595 1.609 3.595 3.594c0 1.985-1.61 3.595-3.595 3.595zm3.737-6.491c-.464 0-.84-.376-.84-.84 0-.464.376-.84.84-.84.464 0 .84.376.84.84 0 .463-.376.84-.84.84zm-1.404 2.896c0 1.289-1.045 2.333-2.333 2.333s-2.333-1.044-2.333-2.333c0-1.289 1.045-2.333 2.333-2.333s2.333 1.044 2.333 2.333zm-2.333-12c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.958 14.886c-.115 2.545-1.532 3.955-4.071 4.072-.747.034-.986.042-2.887.042s-2.139-.008-2.886-.042c-2.544-.117-3.955-1.529-4.072-4.072-.034-.746-.042-.985-.042-2.886 0-1.901.008-2.139.042-2.886.117-2.544 1.529-3.955 4.072-4.071.747-.035.985-.043 2.886-.043s2.14.008 2.887.043c2.545.117 3.957 1.532 4.071 4.071.034.747.042.985.042 2.886 0 1.901-.008 2.14-.042 2.886z" />
-                  </svg>
-                </Link>
-                {/* <!--SVG Icon found at: https://iconmonstr.com/facebook-4-svg/--> */}
-                <Link
-                  to="https://www.facebook.com/erstell.knots"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mx-2"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    id="facebook-logo"
-                    viewBox="0 0 24 24"
-                    className="py-2"
-                  >
-                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z" />
-                  </svg>
-                </Link>
-                {/* <!--SVG Icon found at: https://www.iconpacks.net/free-icon/tiktok-logo-4505.html--> */}
-                <Link
-                  to="https://www.tiktok.com/@erstell.knots"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mx-2"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    id="tiktok-logo"
-                    viewBox="0 0 90 90"
-                    className="py-2"
-                  >
-                    <path d="M 45 0 C 20.147 0 0 20.147 0 45 c 0 24.853 20.147 45 45 45 s 45 -20.147 45 -45 C 90 20.147 69.853 0 45 0 z M 72.039 33.277 v 6.758 c -3.187 0.001 -6.283 -0.623 -9.203 -1.855 c -1.878 -0.793 -3.627 -1.814 -5.227 -3.048 l 0.048 20.801 c -0.02 4.684 -1.873 9.085 -5.227 12.4 c -2.73 2.698 -6.188 4.414 -9.937 4.97 c -0.881 0.13 -1.777 0.197 -2.684 0.197 c -4.013 0 -7.823 -1.3 -10.939 -3.698 c -0.586 -0.452 -1.147 -0.941 -1.681 -1.468 c -3.635 -3.593 -5.509 -8.462 -5.194 -13.584 c 0.241 -3.899 1.802 -7.618 4.404 -10.532 c 3.443 -3.857 8.26 -5.998 13.41 -5.998 c 0.906 0 1.803 0.068 2.684 0.198 v 2.499 v 6.951 c -0.835 -0.275 -1.727 -0.427 -2.656 -0.427 c -4.705 0 -8.512 3.839 -8.442 8.548 c 0.045 3.013 1.69 5.646 4.118 7.098 c 1.141 0.682 2.453 1.105 3.853 1.182 c 1.097 0.06 2.151 -0.093 3.126 -0.415 c 3.362 -1.111 5.787 -4.268 5.787 -7.992 l 0.011 -13.93 V 16.5 h 9.307 c 0.009 0.922 0.103 1.822 0.276 2.694 c 0.702 3.529 2.692 6.591 5.46 8.678 c 2.414 1.821 5.42 2.9 8.678 2.9 c 0.002 0 0.029 0 0.027 -0.002 V 33.277 z" />
-                  </svg>
-                </Link>
-              </div>
-            </div>
-          </div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      id="tiktok-logo"
+                      viewBox="0 0 90 90"
+                      className="py-2"
+                    >
+                      <path d="M 45 0 C 20.147 0 0 20.147 0 45 c 0 24.853 20.147 45 45 45 s 45 -20.147 45 -45 C 90 20.147 69.853 0 45 0 z M 72.039 33.277 v 6.758 c -3.187 0.001 -6.283 -0.623 -9.203 -1.855 c -1.878 -0.793 -3.627 -1.814 -5.227 -3.048 l 0.048 20.801 c -0.02 4.684 -1.873 9.085 -5.227 12.4 c -2.73 2.698 -6.188 4.414 -9.937 4.97 c -0.881 0.13 -1.777 0.197 -2.684 0.197 c -4.013 0 -7.823 -1.3 -10.939 -3.698 c -0.586 -0.452 -1.147 -0.941 -1.681 -1.468 c -3.635 -3.593 -5.509 -8.462 -5.194 -13.584 c 0.241 -3.899 1.802 -7.618 4.404 -10.532 c 3.443 -3.857 8.26 -5.998 13.41 -5.998 c 0.906 0 1.803 0.068 2.684 0.198 v 2.499 v 6.951 c -0.835 -0.275 -1.727 -0.427 -2.656 -0.427 c -4.705 0 -8.512 3.839 -8.442 8.548 c 0.045 3.013 1.69 5.646 4.118 7.098 c 1.141 0.682 2.453 1.105 3.853 1.182 c 1.097 0.06 2.151 -0.093 3.126 -0.415 c 3.362 -1.111 5.787 -4.268 5.787 -7.992 l 0.011 -13.93 V 16.5 h 9.307 c 0.009 0.922 0.103 1.822 0.276 2.694 c 0.702 3.529 2.692 6.591 5.46 8.678 c 2.414 1.821 5.42 2.9 8.678 2.9 c 0.002 0 0.029 0 0.027 -0.002 V 33.277 z" />
+                    </svg>
+                  </Link>
+                </Col>
+              </Row>
+            </Col>
 
-          <div
-            className="
+            <div
+              className="
             col-md-6 col-sm-12
             d-flex
             flex-column
@@ -483,57 +413,58 @@ const IndexPage = () => {
             align-items-center
             my-5
             p-3
-          "
-            id="services"
-          >
-            <h2>Services</h2>
-            <p className="pt-2">
-              A few of the services we provide include designing custom
-              patterns, creating custom crochet products, and eventually our own
-              yarn line. We welcome anyone to{' '}
-              <Link to="#contact">reach out</Link> to us if you’d like to
-              collaborate on a pattern together.
-            </p>
-            <h5 className="pt-2">Custom patterns:</h5>
-            <p className="pt-2">
-              If there is an item you’d like a pattern for but can’t seem to
-              find a pattern you like, you can
-              <Link to="#contact">reach out</Link> to us and we can work
-              together to create a custom pattern for your needs or we have
-              patterns available on
-              <Link
-                to="https://www.ravelry.com/designers/april-donk"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Ravelry
-              </Link>
-              and
-              <Link
-                to="https://www.etsy.com/shop/ErstellKnots"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Etsy
-              </Link>
-              .
-            </p>
-            <h5 className="pt-2">Custom Crochet Products:</h5>
-            <p className="pt-2">
-              If you see a pattern in our
-              <Link
-                to="https://www.ravelry.com/stores/erstellknots-designs"
-                target="_blank"
-                rel="noreferrer"
-              >
-                store
-              </Link>
-              that you love, we can create the item for you with yarn we already
-              have or yarn of your choice. If you order locally, we can provide
-              delivery for a small fee.
-            </p>
-          </div>
-        </Row>
+            "
+              id="services"
+            >
+              <h2>Services</h2>
+              <p className="pt-2">
+                A few of the services we provide include designing custom
+                patterns, creating custom crochet products, and eventually our
+                own yarn line. We welcome anyone to{' '}
+                <Link to="#contact">reach out</Link> to us if you’d like to
+                collaborate on a pattern together.
+              </p>
+              <h5 className="pt-2">Custom patterns:</h5>
+              <p className="pt-2">
+                If there is an item you’d like a pattern for but can’t seem to
+                find a pattern you like, you can
+                <Link to="#contact">reach out</Link> to us and we can work
+                together to create a custom pattern for your needs or we have
+                patterns available on
+                <Link
+                  to="https://www.ravelry.com/designers/april-donk"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Ravelry
+                </Link>
+                and
+                <Link
+                  to="https://www.etsy.com/shop/ErstellKnots"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Etsy
+                </Link>
+                .
+              </p>
+              <h5 className="pt-2">Custom Crochet Products:</h5>
+              <p className="pt-2">
+                If you see a pattern in our
+                <Link
+                  to="https://www.ravelry.com/stores/erstellknots-designs"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  store
+                </Link>
+                that you love, we can create the item for you with yarn we
+                already have or yarn of your choice. If you order locally, we
+                can provide delivery for a small fee.
+              </p>
+            </div>
+          </Row>
+        </Container>
       </Section>
       {/* <!--end services --> */}
       {/* <!-- contact form --> */}
