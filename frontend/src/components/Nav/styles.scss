@@ -1,1 +1,18 @@
 @import '../../styles/utilities/imports';
+
+.navbar {
+  &__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    list-style: none;
+
+    @include media('<tablet') {
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+  }
+}

@@ -6,9 +6,9 @@ import Col from '../Col';
 import './styles.scss';
 
 const Hero = () => (
-  <Container>
+  <Container className="hero">
     <header className="hero">
-      <Row>
+      <Row className="pt-0 hero__container">
         <Col span={6} className="hero__img">
           <StaticImage src="../../images/logo-ek-watercolor.png" alt="hero" />
         </Col>
