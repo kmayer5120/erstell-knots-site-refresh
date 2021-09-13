@@ -7,8 +7,8 @@ import './styles.scss';
 
 const Hero = () => (
   <Container className="hero">
-    <header className="hero">
-      <Row className="pt-0 hero__container">
+    <header>
+      <Row className="pt-0 hero__container pt-0">
         <Col span={6} className="hero__img">
           <StaticImage src="../../images/logo-ek-watercolor.png" alt="hero" />
         </Col>

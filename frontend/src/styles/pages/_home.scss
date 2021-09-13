@@ -77,58 +77,6 @@
 }
 
 /*COMPONENT STYLING*/
-.footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  bottom: 0;
-  height: 8rem;
-  width: 100vw;
-  background-color: $blueberry;
-  color: $light-text;
-
-  &__created-by {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-
-  svg {
-    fill: $sage;
-    transition: all $transition-curve-speed;
-
-    &:hover,
-    &:focus {
-      fill: $off-white;
-      transform: translateY(-1.5px);
-    }
-  }
-
-  @media screen and (max-width: 767px) {
-    height: 10rem;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    &__copyright {
-      padding-top: 1rem;
-    }
-
-    &__copyright span {
-      display: none;
-    }
-
-    &__created-by {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      padding-top: 1rem;
-    }
-  }
-}
 
 .announcements {
   border-left: 0.5rem solid $blueberry;
@@ -181,39 +129,7 @@
   }
 }
 
-.image-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 3rem;
 
-  &__section {
-    background-color: $sage;
-  }
-
-  &__card {
-    background-color: $off-white;
-    padding: 2rem;
-    margin: 0.5rem;
-    box-shadow: $box-shadow;
-    border-radius: $card-border-radius;
-    transition: all ease-in-out 300ms;
-
-    &:hover {
-      transform: translateY(-0.5rem);
-      border-radius: $card-border-radius-hover;
-    }
-  }
-
-  img {
-    width: 100%;
-    height: auto;
-  }
-
-  @media screen and (max-width: 768px) {
-    grid-template-columns: 1fr;
-    align-items: center;
-  }
-}
 
 #etsy-link,
 #ravelry-link {
@@ -280,56 +196,4 @@
   justify-content: center;
   box-shadow: none;
   padding: 1rem;
-}
-
-#menu-descriptor {
-  color: $dark-text;
-  margin-left: 10px;
-}
-
-.g-recaptcha {
-  transform: scale(0.77);
-  transform-origin: 0 0;
-  -webkit-transform: scale(0.77);
-  -webkit-transform-origin: 0 0;
-}
-
-/*
-    Large Screens
- */
-@media screen and (min-width: 900px) {
-  #contact {
-    width: 50vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 1rem;
-  }
-
-  #about-me-wrapper {
-    width: 85vw;
-  }
-}
-
-/*
-    Small Screens
- */
-@media screen and (max-width: 500px) {
-  #img-header {
-    width: 75%;
-    height: 75%;
-  }
-
-  #gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
-    grid-gap: 1rem;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-  }
-
-  #services {
-    margin: 1rem;
-  }
 }

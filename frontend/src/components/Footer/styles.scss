@@ -1,0 +1,54 @@
+@import '../../styles/utilities/imports';
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  height: 8rem;
+  width: 100vw;
+  background-color: $blueberry;
+  color: $light-text;
+
+  &__created-by {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  svg {
+    fill: $sage;
+    transition: all $transition-curve-speed;
+
+    &:hover,
+    &:focus {
+      fill: $off-white;
+      transform: translateY(-1.5px);
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    height: 10rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__copyright {
+      padding-top: 1rem;
+    }
+
+    &__copyright span {
+      display: none;
+    }
+
+    &__created-by {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding-top: 1rem;
+    }
+  }
+}
