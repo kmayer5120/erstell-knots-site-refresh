@@ -15,6 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@sanity/cli": "^2.20.0",
     "classnames": "^2.3.1",
     "gatsby": "^3.12.1",
     "gatsby-plugin-gatsby-cloud": "^3.0.0",
